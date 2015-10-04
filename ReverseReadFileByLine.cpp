@@ -200,7 +200,7 @@ int GetLastErrno(void* read_handle)
 //根据错误码获取错误信息
 char* GetLastErrMsg(int errNo)
 {
-    char msg[100] = {0};
+    static char msg[100] = {0};
     switch(errNo)
     {
         case NO_ERROR:
